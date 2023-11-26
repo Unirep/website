@@ -28,11 +28,11 @@ export default function Projects() {
                 </Box>
 
                 <VStack align="left" spacing="4" pb="16">
-                    <Heading fontSize={{ base: "40px", sm: "46px", md: "72px" }}>Built with Semaphore</Heading>
+                    <Heading fontSize={{ base: "40px", sm: "46px", md: "72px" }}>Built with UniRep</Heading>
 
                     <Text fontSize={{ base: "16px", sm: "18px", md: "20px" }}>
                         Discover a curated showcase of innovative projects <br /> and applications developed using the
-                        Semaphore Protocol.
+                        UniRep Protocol.
                     </Text>
                 </VStack>
             </VStack>

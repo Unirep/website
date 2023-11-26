@@ -5,22 +5,24 @@ import Navbar from "../components/Navbar"
 import Providers from "./providers"
 
 export const metadata: Metadata = {
-    title: "Semaphore",
-    description: "A zero-knowledge protocol for anonymous signaling on Ethereum.",
+    title: "UniRep",
+    description: "A zero-knowledge protocol for anonymous user data management on Ethereum.",
     icons: { icon: "/icon.svg", apple: "/apple-icon.png" },
-    metadataBase: new URL("https://website.semaphore.pse.dev"),
+    metadataBase: new URL("https://unirep.io"),
     openGraph: {
         type: "website",
-        url: "https://website.semaphore.pse.dev",
-        title: "Semaphore",
-        description: "A zero-knowledge protocol for anonymous signaling on Ethereum.",
-        siteName: "Semaphore",
+        url: "https://unirep.io",
+        title: "UniRep",
+        description: "A zero-knowledge protocol for anonymous user data management on Ethereum.",
+        siteName: "UniRep",
+        // TODO: update image
         images: [
             {
                 url: "https://website.semaphore.pse.dev/social-media.png"
             }
         ]
     },
+    // TODO: update image
     twitter: { card: "summary_large_image", images: "https://website.semaphore.pse.dev/social-media.png" }
 }
 

@@ -1,37 +1,30 @@
 [
     {
-        "title": "To Mixers and Beyond: presenting Semaphore, a privacy gadget built on Ethereum",
+        "title": "Unirep: A private and non-repudiable reputation system",
+        "minRead": 7,
+        "date": "Sep 2, 2019",
+        "authors": ["Vivian Jeng"],
+        "url": "https://medium.com/privacy-scaling-explorations/unirep-a-private-and-non-repudiable-reputation-system-7fb5c6478549"
+    },
+    {
+        "title": "Unirep介紹: 使用ZKP的評價系統",
+        "minRead": 18,
+        "date": "Sep 2, 2019",
+        "authors": ["Vivian Jeng"],
+        "url": "https://medium.com/taipei-ethereum-meetup/unirep介紹-使用zkp的評價系統-216e3f6211f5"
+    },
+    {
+        "title": "UniRep Protocol",
+        "minRead": 6,
+        "date": "Sep 2, 2019",
+        "authors": ["Chiali Tsai"],
+        "url": "https://mirror.xyz/privacy-scaling-explorations.eth/FCVVfy-TQ6R7_wavKj1lCr5dd1zqRvwjnDOYRM5NtsE"
+    },
+    {
+        "title": "UniRep Ceremony: An Invitation to the Celestial Call and UniRep v2",
         "minRead": 8,
         "date": "Sep 2, 2019",
-        "authors": ["Koh Wei Jie"],
-        "url": "https://medium.com/coinmonks/to-mixers-and-beyond-presenting-semaphore-a-privacy-gadget-built-on-ethereum-4c8b00857c9b"
-    },
-    {
-        "title": "Community Proposal: Semaphore: Zero-Knowledge Signaling on Ethereum (Whitepaper v1)",
-        "minRead": 60,
-        "date": "February 2, 2020",
-        "authors": ["Barry Whitehat", "Kobi Gurkan", "Koh Wei Jie"],
-        "url": "https://semaphore.pse.dev/whitepaper-v1.pdf"
-    },
-    {
-        "title": "Release announcement: Semaphore, a zero-knowledge gadget for Ethereum",
-        "minRead": 4,
-        "date": "Mar 3, 2020",
-        "authors": ["Koh Wei Jie"],
-        "url": "https://weijiek.medium.com/release-announcement-semaphore-a-zero-knowledge-gadget-for-ethereum-5b671cd360d4"
-    },
-    {
-        "title": "Semaphore v3 Announcement",
-        "minRead": 4,
-        "date": "Feb 8, 2023",
-        "authors": ["PSE"],
-        "url": "https://mirror.xyz/privacy-scaling-explorations.eth/Yi4muh-vzDZmIqJIcM9Mawu2e7jw8MRnwxvhFcyfns8"
-    },
-    {
-        "title": "Brief Introduction of Semaphore, a Zero-knowledge Group Membership Protocol",
-        "minRead": 7,
-        "date": "Oct 30th 2023",
-        "authors": ["Laszlo Fazekas"],
-        "url": "https://hackernoon.com/brief-introduction-of-semaphore-a-zero-knowledge-group-membership-protocol"
+        "authors": ["Chance Hudson"],
+        "url": "https://mirror.xyz/privacy-scaling-explorations.eth/z-gW2RtgFTV18ZkRGED2XKLn_wDd-SwMSs17vWQwfLs"
     }
 ]

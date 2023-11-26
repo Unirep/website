@@ -30,19 +30,18 @@ export default function Home() {
 
                 <VStack spacing="4">
                     <Heading fontSize={{ base: "40px", sm: "46px", md: "72px" }} textAlign="center">
-                        Anonymous interactions
+                        Anonymous user data management
                     </Heading>
                     <Text fontSize={{ base: "16px", sm: "18px", md: "20px" }} align="center" maxW="800px">
-                        Using zero knowledge, users can prove their group membership and send signals such as votes or
-                        endorsements without revealing their original identity.
+                        Using zero knowledge, users can voluntarily prove their group membership and reputation or data in the group without revealing their original identity.
                     </Text>
                 </VStack>
 
                 <Stack direction={{ base: "column", sm: "row" }} spacing="6" align="center">
-                    <Link href="https://semaphore.pse.dev/docs/quick-setup" isExternal>
+                    <Link href="https://developer.unirep.io/docs/getting-started/create-unirep-app" isExternal>
                         <Button size={{ base: "md", md: "lg" }}>Get Started</Button>
                     </Link>
-                    <Link href="https://demo.semaphore.pse.dev" isExternal>
+                    <Link href="https://demo.unirep.io" isExternal>
                         <Button size={{ base: "md", md: "lg" }} variant="outline">
                             Try the Demo
                         </Button>
@@ -53,14 +52,14 @@ export default function Home() {
             <VStack py="32" spacing="16" w="full">
                 <Carousel
                     display={{ base: "none", md: "flex" }}
-                    title="Explore projects built with Semaphore"
+                    title="Explore projects built with UniRep"
                     sizes={{ md: 2, lg: 3 }}
                     type="projects"
                 />
 
                 <VStack display={{ base: "flex", md: "none" }} spacing="16">
                     <Heading fontSize={{ base: "30px", md: "44px" }} textAlign="center">
-                        Explore projects built with Semaphore
+                        Explore projects built with UniRep
                     </Heading>
 
                     <VStack spacing="3">
@@ -88,7 +87,7 @@ export default function Home() {
             >
                 <CardBody padding="0">
                     <Heading fontSize={{ base: "30px", md: "44px" }} textAlign="center" pb="90px">
-                        Semaphore Features
+                        UniRep Features
                     </Heading>
 
                     <VStack spacing="16">
@@ -200,12 +199,12 @@ export default function Home() {
 
                 <Stack direction={{ base: "column", md: "row" }} px={{ base: "0", md: "12" }} spacing="32">
                     <VStack maxW="450" align="left" spacing="8">
-                        <Heading fontSize={{ base: "30px", md: "44px" }}>Join the Semaphore community</Heading>
+                        <Heading fontSize={{ base: "30px", md: "44px" }}>Join the UniRep community</Heading>
                         <Text fontSize={{ base: "16px", md: "18px" }}>
                             Ask questions, suggest ideas, stay up-to-date, and meet other people building privacy
                             applications with Zero Knowledge.
                         </Text>
-                        <Link href="https://semaphore.pse.dev/discord" isExternal>
+                        <Link href="https://discord.gg/VzMMDJmYc5" isExternal>
                             <Button leftIcon={<IconDiscord />} size="lg">
                                 Discord
                             </Button>

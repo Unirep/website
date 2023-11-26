@@ -180,7 +180,7 @@ await verifyProof(verificationKey, fullProof)`,
         <VStack>
             <VStack w={{ base: "auto", md: "720px" }}>
                 <Text fontSize={{ base: "40px", md: "44px" }} fontWeight={{ base: "400", md: "500" }}>
-                    Semaphore: Anonymous interactions
+                    UniRep: Universal Reputation
                 </Text>
                 <Text fontSize={{ base: "16px", md: "20px" }} mt="24px" lineHeight="32px">
                     Using zero knowledge, Semaphore allows users to prove their membership of a group and send signals

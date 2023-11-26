@@ -36,7 +36,8 @@
         "eventName": "ZK HACK III",
         "date": "Dec 8, 2022",
         "speakers": ["Chance Hudson"],
-        "url": "https://youtu.be/UoTekviYWts?si=-6iOmisEm1oe3YTE"
+        "url": "https://youtu.be/UoTekviYWts?si=-6iOmisEm1oe3YTE",
+        "embeddedUrl": "https://www.youtube.com/embed/UoTekviYWts?si=F8a8ID6koZc97UN-"
     },
     {
         "title": "(中) Introduction to Unirep",

@@ -47,7 +47,7 @@ export default function NavbarLinks({ onClick }: NavbarProps) {
                     Build
                 </Heading>
             </Link>
-            <Link href="https://docs.semaphore.pse.dev" variant="navlink" isExternal>
+            <Link href="https://developer.unirep.io" variant="navlink" isExternal>
                 <HStack spacing="3">
                     <Heading fontSize="18px" fontWeight="normal">
                         Documentation
@@ -55,7 +55,7 @@ export default function NavbarLinks({ onClick }: NavbarProps) {
                     <IconArrowUpRight width="10px" mb={1} />
                 </HStack>
             </Link>
-            <Link href="https://github.com/semaphore-protocol" variant="navlink" isExternal>
+            <Link href="https://github.com/unirep" variant="navlink" isExternal>
                 <HStack spacing="3">
                     <Heading fontSize="18px" fontWeight="normal">
                         Github

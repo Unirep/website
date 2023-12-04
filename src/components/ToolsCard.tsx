@@ -10,18 +10,28 @@ import {
     StackDivider,
     Box,
     Button,
-    Flex
-} from "@chakra-ui/react"
-import IconChevronRight from "@/icons/IconChevronRight"
+    Flex,
+    Link
+} from "@chakra-ui/react";
+import IconChevronRight from "@/icons/IconChevronRight";
 
 export type ToolsCardProps = {
-    icon: any
-    title: string
-    subtitle: string
-    details: string[]
-}
+    icon: any;
+    title: string;
+    subtitle: string;
+    details: string[];
+    href: string;
+    tutorial: string;
+};
 
-export default function ToolsCard({ icon, title, subtitle, details }: ToolsCardProps) {
+export default function ToolsCard({
+    icon,
+    title,
+    subtitle,
+    details,
+    href,
+    tutorial
+}: ToolsCardProps) {
     return (
         <Card
             bg="darkBlue"
@@ -31,29 +41,52 @@ export default function ToolsCard({ icon, title, subtitle, details }: ToolsCardP
             borderColor="alabaster.950"
             padding="32px"
             width={{ base: "full", lg: "348px" }}
-            height={{ base: "auto", lg: "501px" }}
+            // height={{ base: "auto", lg: "501px" }}
         >
             <HStack mb="2rem">{icon}</HStack>
             <CardBody padding={0}>
-                <VStack divider={<StackDivider borderColor="alabaster.950" />} spacing="24px" align="stretch">
+                <VStack
+                    divider={<StackDivider borderColor="alabaster.950" />}
+                    spacing="24px"
+                    align="stretch"
+                >
                     <Box>
                         <Heading fontSize="40px" fontWeight="normal">
                             {title}
                         </Heading>
-                        <Button
-                            mt="24px"
-                            w="full"
-                            bg="semaphore"
-                            color="white"
-                            fontSize="18px"
-                            fontWeight="medium"
-                            _hover={{ bg: "semaphore", opacity: "85%" }}
-                        >
-                            Select tool
-                        </Button>
+                        <Link href={tutorial} isExternal>
+                            <Button
+                                mt="24px"
+                                w="full"
+                                bg="semaphore"
+                                color="white"
+                                fontSize="18px"
+                                fontWeight="medium"
+                                _hover={{ bg: "semaphore", opacity: "85%" }}
+                            >
+                                Getting Started
+                            </Button>
+                        </Link>
+                        <Link href={href} isExternal>
+                            <Button
+                                mt="24px"
+                                w="full"
+                                bg="semaphore"
+                                color="white"
+                                fontSize="18px"
+                                fontWeight="medium"
+                                _hover={{ bg: "semaphore", opacity: "85%" }}
+                            >
+                                Select tool
+                            </Button>
+                        </Link>
                     </Box>
                     <Box>
-                        <Text fontSize="12px" textTransform="uppercase" fontWeight="semibold">
+                        <Text
+                            fontSize="12px"
+                            textTransform="uppercase"
+                            fontWeight="semibold"
+                        >
                             {subtitle}
                         </Text>
 
@@ -62,9 +95,18 @@ export default function ToolsCard({ icon, title, subtitle, details }: ToolsCardP
                                 <ListItem key={elem}>
                                     <Flex>
                                         <HStack alignItems="start" mt="8px">
-                                            <IconChevronRight height={2} width={2} color="ceruleanBlue" />
+                                            <IconChevronRight
+                                                height={2}
+                                                width={2}
+                                                color="ceruleanBlue"
+                                            />
                                         </HStack>
-                                        <Text display="inline-block" ml="8px" fontSize="14px" lineHeight="22.4px">
+                                        <Text
+                                            display="inline-block"
+                                            ml="8px"
+                                            fontSize="14px"
+                                            lineHeight="22.4px"
+                                        >
                                             {elem}
                                         </Text>
                                     </Flex>
@@ -75,5 +117,5 @@ export default function ToolsCard({ icon, title, subtitle, details }: ToolsCardP
                 </VStack>
             </CardBody>
         </Card>
-    )
+    );
 }

@@ -1,12 +1,20 @@
-import { Heading, Text, Card, CardBody, Stack, Button, Flex } from "@chakra-ui/react"
+import { Heading, Text, Card, CardBody, Stack, Button, Flex, Link } from "@chakra-ui/react"
 
 export type ActionCardProps = {
-    title: string
-    description: string
-    buttonText: string
-}
+    title: string;
+    description: string;
+    buttonText: string;
+    href: string;
+    isExternal: boolean;
+};
 
-export default function ActionCard({ title, description, buttonText }: ActionCardProps) {
+export default function ActionCard({
+    title,
+    description,
+    buttonText,
+    href,
+    isExternal,
+}: ActionCardProps) {
     return (
         <Card
             bg="darkBlue"
@@ -52,11 +60,17 @@ export default function ActionCard({ title, description, buttonText }: ActionCar
                             padding="1.5rem 2rem"
                             _hover={{ opacity: "85%" }}
                         >
-                            {buttonText}
+                            {isExternal ? (
+                                <Link href={href} isExternal>
+                                    {buttonText}
+                                </Link>
+                            ) : (
+                                <Link href={href}>{buttonText}</Link>
+                            )}
                         </Button>
                     </Stack>
                 </Flex>
             </CardBody>
         </Card>
-    )
+    );
 }

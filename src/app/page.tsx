@@ -1,6 +1,7 @@
 import { Box, Button, Card, CardBody, Heading, HStack, Link, Stack, Text, VStack } from "@chakra-ui/react"
 import { Sora } from "next/font/google"
 import Image from "next/image"
+import NextLink from "next/link"
 import Carousel from "../components/Carousel"
 import ProjectCard from "../components/ProjectCard"
 import events from "../data/events.json"
@@ -38,7 +39,7 @@ export default function Home() {
                 </VStack>
 
                 <Stack direction={{ base: "column", sm: "row" }} spacing="6" align="center">
-                    <Link href="https://developer.unirep.io/docs/getting-started/create-unirep-app" isExternal>
+                    <Link as={NextLink} href="/build">
                         <Button size={{ base: "md", md: "lg" }}>Get Started</Button>
                     </Link>
                     <Link href="https://demo.unirep.io" isExternal>
@@ -107,11 +108,10 @@ export default function Home() {
                                 </Heading>
                                 <VStack align="left">
                                     <Text fontSize={{ base: "18px", md: "20px" }} fontFamily={sora.style.fontFamily}>
-                                        Simplify privacy
+                                    Extensible & Interoperable
                                     </Text>
                                     <Text color="alabaster.400" fontSize="14px">
-                                        Semaphore streamlines privacy-centric app development. It empowers developers to
-                                        effortlessly incorporate robust privacy features.
+                                    Designed for scalability: smart contracts, ZK circuits, and flexible data structures enable seamless app integration.
                                     </Text>
                                 </VStack>
                             </HStack>
@@ -125,12 +125,10 @@ export default function Home() {
                                 </Heading>
                                 <VStack align="left">
                                     <Text fontSize={{ base: "18px", md: "20px" }} fontFamily={sora.style.fontFamily}>
-                                        Universal integrations
+                                    Anonymity & User Sovereignty
                                     </Text>
                                     <Text color="alabaster.400" fontSize="14px">
-                                        Semaphore is a protocol for Web2 and Web3. It integrates into any front-end
-                                        framework or pure HTML/CSS/JS. It is cross-chain compatible with EVM, L2s, and
-                                        alt-blockchains.
+                                    Dynamic pseudonyms and secure data storage ensure anonymity, while zero-knowledge proofs allow users to verify past identifiers.
                                     </Text>
                                 </VStack>
                             </HStack>
@@ -151,12 +149,12 @@ export default function Home() {
                                 </Heading>
                                 <VStack align="left">
                                     <Text fontSize={{ base: "18px", md: "20px" }} fontFamily={sora.style.fontFamily}>
-                                        Leverage Zero Knowledge
+                                    Customization & Data Security
+
                                     </Text>
                                     <Text color="alabaster.400" fontSize="14px">
-                                        Semaphore leverages Zero Knowledge, allowing us to verify information without
-                                        revealing any underlying data. This powerful primitive allows one to prove
-                                        membership and signal anonymously.
+                                    Trustless interoperability fosters innovation and upholds user autonomy— data is only revealed or altered with the user's consent.
+
                                     </Text>
                                 </VStack>
                             </HStack>
@@ -173,7 +171,7 @@ export default function Home() {
                                         Free open source software
                                     </Text>
                                     <Text color="alabaster.400" fontSize="14px">
-                                        Semaphore is a Public Good. This means it will never seek to profit, it is owned
+                                        UniRep is a Public Good. This means it will never seek to profit, it is owned
                                         by the community and will always remain open source.
                                     </Text>
                                 </VStack>

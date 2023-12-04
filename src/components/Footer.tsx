@@ -8,7 +8,7 @@ import IconThumbsUp from "../icons/IconThumbsUp"
 export default function Footer() {
     return (
         <VStack py="7" justify="space-between" pt="28" pb="10" spacing="14">
-            <Image width="75" height="158" src="./semaphore-icon.svg" alt="Semaphore logo" />
+            <Image width="75" height="158" src="./unirep-icon.svg" alt="UniRep logo" />
 
             <Stack direction={{ base: "column", md: "row" }} align="center" fontSize="18px" spacing="10">
                 <Link as={NextLink} href="/projects">
@@ -26,7 +26,7 @@ export default function Footer() {
                         Build
                     </Heading>
                 </Link>
-                <Link href="https://docs.semaphore.pse.dev" isExternal>
+                <Link href="https://developer.unirep.io" isExternal>
                     <HStack spacing="3">
                         <Heading fontSize="18px" fontWeight="normal">
                             Documentation
@@ -34,21 +34,10 @@ export default function Footer() {
                         <IconArrowUpRight width="10px" mb={1} />
                     </HStack>
                 </Link>
-                <Link href="https://github.com/semaphore-protocol" isExternal>
+                <Link href="https://github.com/unirep" isExternal>
                     <HStack spacing="3">
                         <Heading fontSize="18px" fontWeight="normal">
                             Github
-                        </Heading>
-                        <IconArrowUpRight width="10px" mb={1} />
-                    </HStack>
-                </Link>
-                <Link
-                    href="https://www.notion.so/pse-team/Semaphore-Identity-Kit-ebbfe6ac0a824fb0a65e8783caf9b330"
-                    isExternal
-                >
-                    <HStack spacing="3">
-                        <Heading fontSize="18px" fontWeight="normal">
-                            Design Kit
                         </Heading>
                         <IconArrowUpRight width="10px" mb={1} />
                     </HStack>

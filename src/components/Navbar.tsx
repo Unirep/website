@@ -34,10 +34,10 @@ export default function Navbar() {
                 <HStack justify="space-between">
                     <Link as={NextLink} href="/">
                         <Box display={{ base: "none", sm: "block" }}>
-                            <Image width="148" height="40" src="./semaphore-logo.svg" alt="Semaphore logo" />
+                            <Image width="148" height="40" src="./unirep-logo.svg" alt="UniRep logo" />
                         </Box>
                         <Box display={{ base: "block", sm: "none" }}>
-                            <Image width="20" height="40" src="./semaphore-icon.svg" alt="Semaphore icon" />
+                            <Image width="20" height="40" src="./unirep-icon.svg" alt="UniRep icon" />
                         </Box>
                     </Link>
 

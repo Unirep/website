@@ -9,7 +9,7 @@ export type ProjectCardProps = {
 
 export default function ProjectCard({ categories, title, description, url, ...props }: ProjectCardProps & LinkProps) {
     return (
-        <Link href={url} isExternal h="full" {...props}>
+        <Link href={url} isExternal h="full" w="full" {...props}>
             <Card
                 bg="darkBlue"
                 borderRadius="18px"

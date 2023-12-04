@@ -1,15 +1,35 @@
-import { Card, CardBody, HStack, Heading, Link, LinkProps, Tag, Text } from "@chakra-ui/react"
+import IconGithub from "@/icons/IconGithub";
+import IconGlobal from "@/icons/IconGlobal";
+import {
+    Box,
+    Card,
+    CardBody,
+    HStack,
+    Heading,
+    Link,
+    LinkProps,
+    Tag,
+    Text,
+} from "@chakra-ui/react";
 
 export type ProjectCardProps = {
-    categories: string[]
-    title: string
-    description: string
-    url?: string
-}
+    categories: string[];
+    title: string;
+    description: string;
+    website?: string;
+    github?: string;
+};
 
-export default function ProjectCard({ categories, title, description, url, ...props }: ProjectCardProps & LinkProps) {
+export default function ProjectCard({
+    categories,
+    title,
+    description,
+    website,
+    github,
+    ...props
+}: ProjectCardProps & LinkProps) {
     return (
-        <Link href={url} isExternal h="full" w="full" {...props}>
+        <Box h="full" w="full" {...props}>
             <Card
                 bg="darkBlue"
                 borderRadius="18px"
@@ -32,11 +52,46 @@ export default function ProjectCard({ categories, title, description, url, ...pr
                     <Heading fontSize="24px" lineHeight="33px">
                         {title}
                     </Heading>
-                    <Text mt="1rem" gap="10px" fontSize="14px" lineHeight="22.4px">
+                    <Text
+                        mt="1rem"
+                        mb="1rem"
+                        gap="10px"
+                        fontSize="14px"
+                        lineHeight="22.4px"
+                        height={{ base: "auto", md: "3.2rem" }}
+                    >
                         {description}
                     </Text>
+                    <HStack gap="8px" textColor="text.400">
+                        {github && (
+                            <Link
+                                href={github}
+                                isExternal
+                                _hover={{ textColor: "text.600" }}
+                            >
+                                <IconGithub
+                                    width={30}
+                                    height={30}
+                                    fill="currentColor"
+                                />
+                            </Link>
+                        )}
+                        {website && (
+                            <Link
+                                href={website}
+                                isExternal
+                                _hover={{ textColor: "text.600" }}
+                            >
+                                <IconGlobal
+                                    width={30}
+                                    height={30}
+                                    fill="currentColor"
+                                />
+                            </Link>
+                        )}
+                    </HStack>
                 </CardBody>
             </Card>
-        </Link>
-    )
+        </Box>
+    );
 }

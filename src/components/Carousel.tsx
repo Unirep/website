@@ -90,7 +90,8 @@ export default function Carousel({ title, sizes, type, ...props }: CarouselProps
                                     title={project.name}
                                     description={project.tagline}
                                     categories={project.categories}
-                                    url={project.links.github || project.links.website}
+                                    website={project.links.website}
+                                    github={project.links.github}
                                 />
                             </Box>
                         ))}

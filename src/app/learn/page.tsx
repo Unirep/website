@@ -78,114 +78,207 @@ export default function Learn() {
 
     const sectionBlockTexts: SectionBlockProps[] = [
         {
-            title: "Semaphore identities",
+            title: "Attesters",
             description:
-                "Given to all Semaphore group members, it is comprised of three parts - identity commitment, trapdoor, and nullifier.",
-            linkText: "Create Semaphore identities",
-            linkUrl: "https://semaphore.pse.dev/docs/guides/identities",
-            codeText: `import { Identity } from "@semaphore-protocol/identity"
-
-const identity = new Identity()
-
-const trapdoor = identity.getTrapdoor()
-const nullifier = identity.getNullifier()
-const commitment = identity.generateCommitment()`,
-            itemList: [
-                {
-                    icon: <IconEyelash w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Private values",
-                    body: "Trapdoor and nullifier values are the private values of the Semaphore identity. To avoid fraud, the owner must keep both values secret."
-                },
-                {
-                    icon: <IconEye w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Public values",
-                    body: "Semaphore uses the Poseidon hash function to create the identity commitment from the identity private values. Identity commitments can be made public, similarly to Ethereum addresses."
-                },
-                {
-                    icon: <IconUser w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Generate identities",
-                    body: "Semaphore identities can be generated deterministically or randomly. Deterministic identities can be generated from the hash of a secret message."
-                }
-            ]
+                "Attesters are responsible for attesting to the reputation of users. They can be Ethereum accounts, multi-sig wallets or smart contracts.",
+            linkText: "Design an attester",
+            linkUrl: "https://developer.unirep.io/docs/getting-started/create-unirep-app",
+            codeText: `pragma solidity ^0.8.0;
+import {Unirep} from '@unirep/contracts/Unirep.sol';
+            
+contract Attester {
+    Unirep public unirep;
+    constructor(
+        Unirep _unirep,
+        uint48 _epochLength
+    ) {
+        // set UniRep address
+        unirep = _unirep;
+        // sign up as an attester
+        unirep.attesterSignUp(_epochLength);
+    }
+}
+`,
+            language: "solidity",
+            // itemList: [
+            //     {
+            //         icon: <IconEyelash w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Private values",
+            //         body: "Trapdoor and nullifier values are the private values of the Semaphore identity. To avoid fraud, the owner must keep both values secret."
+            //     },
+            //     {
+            //         icon: <IconEye w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Public values",
+            //         body: "Semaphore uses the Poseidon hash function to create the identity commitment from the identity private values. Identity commitments can be made public, similarly to Ethereum addresses."
+            //     },
+            //     {
+            //         icon: <IconUser w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Generate identities",
+            //         body: "Semaphore identities can be generated deterministically or randomly. Deterministic identities can be generated from the hash of a secret message."
+            //     }
+            // ]
         },
         {
-            title: "Semaphore groups",
+            title: "Users",
             description:
-                "Semaphore groups are binary incremental Merkle trees that store the public identity commitment of each member.",
-            linkText: "Create Semaphore groups",
-            linkUrl: "https://semaphore.pse.dev/docs/guides/groups",
-            codeText: `import { Group } from "@semaphore-protocol/group"
-
-const group = new Group()
-
-group.addMember(commitment)`,
-            itemList: [
-                {
-                    icon: <IconTree w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Merkle trees",
-                    body: "Each leaf contains an identity commitment for a user. The identity commitment proves that the user is a group member without revealing the private identity of the user."
-                },
-                {
-                    icon: <IconGroup w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Types of groups",
-                    body: "Groups can be created and managed in a decentralized fashion with Semaphore contracts or off-chain with our JavaScript libraries."
-                },
-                {
-                    icon: <IconManageUsers w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Group management",
-                    body: "Users can join and leave groups by themselves, or an admin can add and remove them. Admins can be centralized authorities, Ethereum accounts, multi-sig wallets or smart contracts."
-                }
-            ]
-        },
-        {
-            title: "Semaphore proofs",
-            description:
-                "Semaphore group members can anonymously prove that they are part of a group and that they are generating their own proofs and signals.",
-            linkText: "Generate Semaphore proofs",
-            linkUrl: "https://semaphore.pse.dev/docs/guides/proofs",
-            codeText: `import { generateProof, verifyProof } from "@semaphore-protocol/proof"
-
-const externalNullifier = BigInt(1)
-const signal = "Hello world"
-
-const fullProof = await generateProof(identity, group, externalNullifier, signal, {
-    zkeyFilePath: "./semaphore.zkey",
-    wasmFilePath: "./semaphore.wasm"
+                "Users in UniRep protocol can choose to signup in one or more attesters. Once users signup, they can start to be attested by attesters and generate reputation or data proofs.",
+            linkText: "Generate User State",
+            linkUrl: "https://developer.unirep.io/docs/core-api/classes/UserState",
+            codeText: `import { UserState } from '@unirep/core'
+import { defaultProver } from '@unirep/circuits/provers/defaultProver'
+import { Identity } from '@semaphore-protocol/identity'
+            
+const id = new Identity()
+const userState = new UserState({
+    prover: defaultProver, // a circuit prover
+    unirepAddress: '0xaabbccaabbccaabbccaabbccaabbccaabbccaaaa',
+    provider, // an ethers.js provider
+    id,
 })
 
-const verificationKey = JSON.parse(fs.readFileSync("./semaphore.json", "utf-8"))
+// start the synchoronizer deamon
+await userState.start()
+await userState.waitForSync()
+`,
+            language: "ts",
+            // itemList: [
+            //     {
+            //         icon: <IconTree w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Merkle trees",
+            //         body: "Each leaf contains an identity commitment for a user. The identity commitment proves that the user is a group member without revealing the private identity of the user."
+            //     },
+            //     {
+            //         icon: <IconGroup w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Types of groups",
+            //         body: "Groups can be created and managed in a decentralized fashion with Semaphore contracts or off-chain with our JavaScript libraries."
+            //     },
+            //     {
+            //         icon: <IconManageUsers w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Group management",
+            //         body: "Users can join and leave groups by themselves, or an admin can add and remove them. Admins can be centralized authorities, Ethereum accounts, multi-sig wallets or smart contracts."
+            //     }
+            // ]
+        },
+        {
+            title: "Data",
+            description:
+                `UniRep protocol supports two types of data field: addition data field and replacement data field. The elements in addition field are combined with addition. The elements in replacement field are combined by replacement.`,
+            linkText: "Learn more about data fields",
+            linkUrl: "https://developer.unirep.io/docs/protocol/data",
+            codeText: `// addition data field
+old_data[0] = 3
+new_data[0] = 5
+final_data[0] = old_data[0] + new_data[0] = 8
 
-await verifyProof(verificationKey, fullProof)`,
-            itemList: [
-                {
-                    icon: <IconBadge w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Membership",
-                    body: "Only users who are part of a group can generate a valid proof for that group."
-                },
-                {
-                    icon: <IconFlag w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Signals",
-                    body: "Group users can anonymously broadcast signals such as votes or endorsements without revealing their original identity."
-                },
-                {
-                    icon: <IconCheck w="24px" h="24px" color="ceruleanBlue" />,
-                    heading: "Verifiers",
-                    body: "Semaphore proofs can be verified with our contracts or off-chain with our JavaScript libraries."
-                }
-            ]
+// replacement data field
+old_data[0] = 3
+new_data[0] = 5
+final_data[0] = new_data[0] = 5`,
+            language: "ts",
+            // itemList: [
+            //     {
+            //         icon: <IconBadge w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Membership",
+            //         body: "Only users who are part of a group can generate a valid proof for that group."
+            //     },
+            //     {
+            //         icon: <IconFlag w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Signals",
+            //         body: "Group users can anonymously broadcast signals such as votes or endorsements without revealing their original identity."
+            //     },
+            //     {
+            //         icon: <IconCheck w="24px" h="24px" color="ceruleanBlue" />,
+            //         heading: "Verifiers",
+            //         body: "Semaphore proofs can be verified with our contracts or off-chain with our JavaScript libraries."
+            //     }
+            // ]
+        },
+        {
+            title: "Epoch Key",
+            description:
+                `Epoch key is used to receive data from attesters. It works like an Ethereum address to receive tokens, but each user can generate multiple epoch keys per epoch, and each epoch key cannot be linked to the same user.`,
+            linkText: "Generate an epoch key to receive data",
+            linkUrl: "https://developer.unirep.io/docs/protocol/epoch-key",
+            codeText: `import { genEpochKey } from '@unirep/utils'
+// get epoch from contract
+const epoch = await unirepContract.attesterCurrentEpoch(attester.address)
+// define nonce
+const nonce = 0 // it could be 0 to (NUM_EPOCH_KEY_NONCE - 1) per user
+// get chainId from ethers.js provider
+const { chainId } = await provider.getNetwork()
+// generate an epoch key
+const epochKey = genEpochKey(
+    identity.secret,
+    BigInt(attester.address),
+    epoch,
+    nonce,
+    chainId,
+)`,
+            language: "ts",
+        },
+        {
+            title: "Attest",
+            description:
+                `The attesters are responsible for attesting to the epoch key of the users. The attester can define the attest rules and execute it in the smart contract.`,
+            linkText: "Define Attest Rules",
+            linkUrl: "https://developer.unirep.io/docs/contracts-api/unirep-sol#attest",
+            codeText: `function attest(
+    uint epochKey,
+    uint48 epoch,
+) public {
+    // only attest to field index = 0
+    uint fieldIndex = 0;
+    // only attest with value = 5
+    uint val = 5;
+    unirep.attest(epochKey, epoch, fieldIndex, val);
+}`,
+            language: "solidity",
+        },
+        {
+            title: "User State Transition",
+            description:
+                `After receiving data from attesters, users should perform a user state transition to update the user state on-chain. It should be called after an epoch finishes.`,
+            linkText: "Perform Transition",
+            linkUrl: "https://developer.unirep.io/docs/protocol/user-state-transition",
+            codeText: `// call to make sure the state is updated
+await userState.waitForSync()
+// generate the user state transition proof
+const { proof, publicSignals } = await userState.genUserStateTransitionProof()
+// sends the tx
+const tx = await unirepContract.userStateTransition(
+    publicSignals,
+    proof
+)
+await tx.wait()`,
+            language: "ts",
+        },
+        {
+            title: "Prove Reputation",
+            description:
+                `After user state is updated in the latest epoch, the users can generate reputation proofs to prove their reputation in the group.`,
+            linkText: "Generate Reputation Proof",
+            linkUrl: "https://developer.unirep.io/docs/core-api/classes/UserState#genprovereputationproof",
+            codeText: `// call to make sure the state is updated
+await userState.waitForSync()
+// the data that the user wants to prove
+// If the user has 5, they can choose to prove they have more than 3
+const repProof = await userState.genProveReputationProof({
+    minRep: 3
+})`,
+            language: "ts",
         }
+
     ]
 
-    const renderTabBlockSemaphore = () => (
+    const renderTabBlockUniRep = () => (
         <VStack>
             <VStack w={{ base: "auto", md: "720px" }}>
                 <Text fontSize={{ base: "40px", md: "44px" }} fontWeight={{ base: "400", md: "500" }}>
                     UniRep: Universal Reputation
                 </Text>
                 <Text fontSize={{ base: "16px", md: "20px" }} mt="24px" lineHeight="32px">
-                    Using zero knowledge, Semaphore allows users to prove their membership of a group and send signals
-                    such as votes or endorsements without revealing their original identity. The goal is to make
-                    Semaphore a standard for anonymous signaling and group membership proving.
+                    Using zero knowledge, UniRep allows users to voluntarily prove their membership of a group and reputation or data in the group without revealing their original identity. The goal is to make
+                    UniRep a standard for anonymous reputation and group membership proving.
                 </Text>
             </VStack>
             <VStack mt="40px">
@@ -296,7 +389,7 @@ await verifyProof(verificationKey, fullProof)`,
                     <Box overflow="auto" mx="3">
                         <TabList gap="40px" w="max-content" whiteSpace="nowrap">
                             <Tab px={0} fontSize="24px">
-                                About Semaphore
+                                About UniRep
                             </Tab>
                             <Tab px={0} fontSize="24px">
                                 About Zero Knowledge
@@ -305,7 +398,7 @@ await verifyProof(verificationKey, fullProof)`,
                     </Box>
                     <TabIndicator mt="-1.5px" height="2px" bg="white" borderRadius="1px" />
                     <TabPanels mt="80px">
-                        <TabPanel>{renderTabBlockSemaphore()}</TabPanel>
+                        <TabPanel>{renderTabBlockUniRep()}</TabPanel>
                         <TabPanel>{renderTabBlockZeroKnowledge()}</TabPanel>
                     </TabPanels>
                 </Tabs>
@@ -320,7 +413,8 @@ await verifyProof(verificationKey, fullProof)`,
                             linkText={sectionBlockText.linkText}
                             linkUrl={sectionBlockText.linkUrl}
                             codeText={sectionBlockText.codeText}
-                            itemList={sectionBlockText.itemList}
+                            // itemList={sectionBlockText.itemList}
+                            language={sectionBlockText.language}
                         />
                         {i !== sectionBlockTexts.length - 1 && <Divider my="68px" borderColor="alabaster.600" />}
                     </VStack>

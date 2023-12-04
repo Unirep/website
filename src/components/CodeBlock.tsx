@@ -3,18 +3,20 @@ import { CodeBlock, ocean } from "react-code-blocks"
 
 export type CodekBlockProps = {
     text: string
+    language: string
 }
 
-export default function CodekBlock({ text }: CodekBlockProps) {
+export default function CodekBlock({ text, language }: CodekBlockProps) {
     const { onCopy, hasCopied } = useClipboard(text)
 
     const copyBlockProps = {
         text,
-        language: "ts",
+        language: language,
         showLineNumbers: false,
         wrapLines: true,
         theme: ocean,
         customStyle: {
+            font: "16px/1.5 'Fira Code', monospace",
             background: "transparent",
             overflow: "auto",
             padding: "24px",

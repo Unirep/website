@@ -16,10 +16,10 @@ export type SectionBlockProps = {
     linkText: string
     linkUrl: string
     codeText: string
-    itemList: SectionItem[]
+    language: string
 }
 
-export default function SectionBlock({ title, description, linkText, linkUrl, codeText, itemList }: SectionBlockProps) {
+export default function SectionBlock({ title, description, linkText, linkUrl, codeText, language }: SectionBlockProps) {
     return (
         <VStack w="full">
             <Flex flexDir={{ base: "column", lg: "row" }} gap="52px" w="full">
@@ -44,10 +44,10 @@ export default function SectionBlock({ title, description, linkText, linkUrl, co
                     </Link>
                 </VStack>
 
-                <CodekBlock text={codeText} />
+                <CodekBlock text={codeText} language={language} />
             </Flex>
             <Flex mt="80px" gap="40px" justify="start" alignItems="center" wrap={{ base: "wrap", xl: "nowrap" }}>
-                {itemList.map((item) => (
+                {/* {itemList.map((item) => (
                     <VStack key={item.heading} alignItems="start">
                         <VStack>{item.icon}</VStack>
                         <Text fontSize="24px">{item.heading}</Text>
@@ -55,7 +55,7 @@ export default function SectionBlock({ title, description, linkText, linkUrl, co
                             {item.body}
                         </Text>
                     </VStack>
-                ))}
+                ))} */}
             </Flex>
         </VStack>
     )

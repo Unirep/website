@@ -153,7 +153,7 @@ export default function Home() {
 
                                     </Text>
                                     <Text color="alabaster.400" fontSize="14px">
-                                    Trustless interoperability fosters innovation and upholds user autonomy— data is only revealed or altered with the user's consent.
+                                    {"Trustless interoperability fosters innovation and upholds user autonomy— data is only revealed or altered with the user\'s consent."}
 
                                     </Text>
                                 </VStack>

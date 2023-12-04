@@ -37,7 +37,7 @@ export default function ProjectsList(props: any) {
 
     useEffect(() => {
         filterProjects()
-    }, [selectedCategory, onlyPSE])
+    }, [selectedCategory, onlyPSE, filterProjects])
 
     return (
         <VStack {...props}>

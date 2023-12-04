@@ -34,7 +34,7 @@ export default function Carousel({ title, sizes, type, ...props }: CarouselProps
         } else {
             setIndex((prevIndex) => prevIndex + 1)
         }
-    }, [index, size])
+    }, [index, size, type])
 
     const previousProject = useCallback(() => {
         if (index === 0) {
@@ -42,7 +42,7 @@ export default function Carousel({ title, sizes, type, ...props }: CarouselProps
         } else {
             setIndex((prevIndex) => prevIndex - 1)
         }
-    }, [index, size])
+    }, [index, size, type])
 
     return (
         <VStack align="left" w="full" {...props} spacing="12">

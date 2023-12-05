@@ -2,7 +2,7 @@
     {
         "name": "UniRep Social",
         "tagline": "An anonymous social media platform and utilize reputation to control post/comment quality.",
-        "categories": ["Identity", "Social", "Vote"],
+        "categories": ["Identity", "Social", "Vote", "Writing"],
         "pse": true,
         "icon": "",
         "links": {
@@ -12,8 +12,14 @@
     },
     {
         "name": "Trustlist",
-        "tagline": "",
-        "categories": ["Identity", "Transaction", "P2P"],
+        "tagline": "A Craigslist like platfrom. Enhancing traditional peer-to-peer marketplaces with a dynamic reputation system.",
+        "categories": [
+            "Identity",
+            "Transaction",
+            "P2P",
+            "Auction",
+            "Reputation"
+        ],
         "pse": true,
         "icon": "",
         "links": {
@@ -23,8 +29,8 @@
     },
     {
         "name": "Voteathon",
-        "tagline": "",
-        "categories": ["Identity", "Vote"],
+        "tagline": "A private voting app to decide your favorite hackathon project. Winners can claim rewards anonymously.",
+        "categories": ["Identity", "Vote", "Hackathon", "NFT"],
         "pse": true,
         "icon": "",
         "links": {
@@ -34,8 +40,8 @@
     },
     {
         "name": "UniRep Social TW",
-        "tagline": "",
-        "categories": ["Identity", "Social"],
+        "tagline": "An anonymous social media which is built by Taiwan community.",
+        "categories": ["Identity", "Social", "Community", "Vote", "Writing"],
         "pse": false,
         "icon": "",
         "links": {
@@ -44,8 +50,8 @@
     },
     {
         "name": "Anon Transfer",
-        "tagline": "",
-        "categories": ["Identity", "Transfer", "Wallet"],
+        "tagline": "An anonymous ETH transfer system that disconnects all addresses and values.",
+        "categories": ["Identity", "Transfer", "Wallet", "Token", "ETH"],
         "pse": true,
         "icon": "",
         "links": {
@@ -54,8 +60,8 @@
     },
     {
         "name": "My-Badge",
-        "tagline": "",
-        "categories": ["Identity", "Web2"],
+        "tagline": "A bridge between web2 reputation (github, twitter) and web3 reputation",
+        "categories": ["Identity", "Web2", "Github", "Twitter", "Reputation"],
         "pse": true,
         "icon": "",
         "links": {
@@ -64,18 +70,19 @@
     },
     {
         "name": "zketh",
-        "tagline": "",
-        "categories": ["Identity", "Wallet"],
+        "tagline": "Do things with ethereum addresses in zk",
+        "categories": ["Identity", "Wallet", "ETH"],
         "pse": true,
         "icon": "",
         "links": {
-            "github": "https://github.com/Unirep/zketh"
+            "github": "https://github.com/Unirep/zketh",
+            "website": "https://zketh.io"
         }
     },
     {
         "name": "canon",
-        "tagline": "",
-        "categories": ["Writing"],
+        "tagline": "A collaborative story writing system. Gain reputation for authoring portions of the story.",
+        "categories": ["Writing", "Reputation", "Vote"],
         "pse": true,
         "icon": "",
         "links": {
@@ -85,8 +92,8 @@
     },
     {
         "name": "zkDAO",
-        "tagline": "",
-        "categories": ["Vote", "DAO"],
+        "tagline": "Users may join the DAO, create proposals and vote anonymously.",
+        "categories": ["Vote", "DAO", "ERC20", "ETH"],
         "pse": true,
         "icon": "",
         "links": {
@@ -95,8 +102,8 @@
     },
     {
         "name": "ZinKedin",
-        "tagline": "",
-        "categories": ["Job"],
+        "tagline": "ZinKedin is a Dapp and it's similar to 'Linkedin' in web2. However, ZinKedin protects user data with ZK proof from leaking to others who doesn't be permitted!",
+        "categories": ["Job", "Web2", "Reputation", "Hackathon"],
         "pse": false,
         "icon": "",
         "links": {
@@ -105,19 +112,20 @@
         }
     },
     {
-        "name": "ZKNode",
-        "tagline": "",
-        "categories": ["Identity"],
+        "name": "ZKode",
+        "tagline": "A privacy-centric platform enabling anonymous developers to safely display their skills & collaborate with employers, leveraging UniRep for trust.",
+        "categories": ["Reputation", "Code", "Github", "Hackathon"],
         "pse": false,
         "icon": "",
         "links": {
-            "website": "https://taikai.network/ethtaipei/hackathons/hackathon/projects/clgneg8t612260440127tanrwpnr/idea"
+            "website": "https://taikai.network/ethtaipei/hackathons/hackathon/projects/clgneg8t612260440127tanrwpnr/idea",
+            "github": "https://github.com/JhiNResH/zkode_ETHTaipei"
         }
     },
     {
         "name": "Ideal Town",
-        "tagline": "",
-        "categories": ["Writing"],
+        "tagline": "Ideal Town is a freelance dapp with tokenized reputation mechanism",
+        "categories": ["Writing", "DAO", "Vote", "Hackathon"],
         "pse": false,
         "icon": "",
         "links": {
@@ -126,9 +134,9 @@
         }
     },
     {
-        "name": "ZKDao",
-        "tagline": "",
-        "categories": ["DAO", "ERC20", "Vote"],
+        "name": "ZK-Dao",
+        "tagline": "Users may join the DAO, create proposals and vote anonymously.",
+        "categories": ["DAO", "ERC20", "Vote", "Hackathon"],
         "pse": false,
         "icon": "",
         "links": {

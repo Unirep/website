@@ -8,6 +8,7 @@ import {
     Heading,
     Link,
     LinkProps,
+    Spacer,
     Tag,
     Text,
 } from "@chakra-ui/react";
@@ -58,10 +59,12 @@ export default function ProjectCard({
                         gap="10px"
                         fontSize="14px"
                         lineHeight="22.4px"
-                        height={{ base: "auto", md: "3.2rem" }}
+                        height={{ base: "auto", md: "4rem" }}
+                        overflow={{ base: "visible", md: "scroll" }}
                     >
                         {description}
                     </Text>
+                    <Spacer></Spacer>
                     <HStack gap="8px" textColor="text.400">
                         {github && (
                             <Link

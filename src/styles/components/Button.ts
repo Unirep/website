@@ -3,17 +3,20 @@ import { font } from "../styles"
 
 const Button = {
     baseStyle: {
+        _hover:{
+            transform: "scale(0.9)"
+        },
         _focus: {
             boxShadow: "none"
         },
         borderRadius: "100px",
         fontFamily: font.style.fontFamily,
-        fontWeight: "400",
-        paddingLeft: "18px !important",
-        paddingRight: "18px !important"
+        fontWeight: "500",
+        paddingLeft: "24px !important",
+        paddingRight: "24px !important"
     },
     defaultProps: {
-        colorScheme: "white"
+        colorScheme: "teal"
     },
     variants: {
         solid: (props: StyleFunctionProps): SystemStyleObject => {
@@ -22,7 +25,7 @@ const Button = {
             if (c === "primary") {
                 // const bgGradient = "linear(to-r, primary.500, primary.800)"
                 const bg = `${c}.500`
-                const color = "white"
+                const color = "teal"
 
                 return {
                     bg,

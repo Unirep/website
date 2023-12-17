@@ -13,7 +13,7 @@ const Link = {
             borderBottomWidth: "2px",
             pb: "5px",
             pt: "6px",
-            _hover: { borderBottomColor: "ceruleanBlue" }
+            _hover: { borderBottomColor: "softSun" }
         })
     }
 }

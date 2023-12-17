@@ -29,7 +29,7 @@ export default function Navbar() {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
-        <HStack zIndex="1" py="7" top="0" left="0" right="0" position="fixed" bgColor="darkBlueBg">
+        <HStack zIndex="1" py="7" top="0" left="0" right="0" position="fixed" bgColor="darkGrey">
             <Container maxW="1440px" px={{ base: "5", md: "10" }}>
                 <HStack justify="space-between">
                     <Link as={NextLink} href="/">
@@ -69,7 +69,7 @@ export default function Navbar() {
                                 <Divider mb="20" />
 
                                 <VStack w="full" justify="center" spacing="5">
-                                    <Link href="https://semaphore.pse.dev/discord" isExternal>
+                                    <Link href="https://discord.gg/VzMMDJmYc5" isExternal>
                                         <HStack>
                                             <IconDiscord boxSize="16px" />
                                             <Heading fontSize="14px" fontWeight="normal">
@@ -79,13 +79,13 @@ export default function Navbar() {
                                     </Link>
 
                                     <Link
-                                        href="https://github.com/semaphore-protocol/semaphore/discussions/categories/website"
+                                        href="https://github.com/orgs/Unirep/discussions"
                                         isExternal
                                     >
                                         <HStack>
                                             <IconThumbsUp boxSize="16px" />
                                             <Heading fontSize="14px" fontWeight="normal">
-                                                Give feedback about the website
+                                                Give feedback & discusss ideas
                                             </Heading>
                                         </HStack>
                                     </Link>

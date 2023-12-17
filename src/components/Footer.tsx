@@ -31,7 +31,15 @@ export default function Footer() {
                         <Heading fontSize="18px" fontWeight="normal">
                             Documentation
                         </Heading>
-                        <IconArrowUpRight width="10px" mb={1} />
+                        
+                    </HStack>
+                </Link>
+                <Link href="https://explorer.unirep.io/" isExternal>
+                    <HStack spacing="3">
+                        <Heading fontSize="18px" fontWeight="normal">
+                            Explorer
+                        </Heading>
+                        
                     </HStack>
                 </Link>
                 <Link href="https://github.com/unirep" isExternal>
@@ -39,7 +47,14 @@ export default function Footer() {
                         <Heading fontSize="18px" fontWeight="normal">
                             Github
                         </Heading>
-                        <IconArrowUpRight width="10px" mb={1} />
+                       
+                    </HStack>
+                </Link><Link href="https://twitter.com/UniRep_Protocol" isExternal>
+                    <HStack spacing="3">
+                        <Heading fontSize="18px" fontWeight="normal">
+                            X
+                        </Heading>
+                       
                     </HStack>
                 </Link>
             </Stack>
@@ -47,23 +62,23 @@ export default function Footer() {
             <Divider />
 
             <VStack spacing="5">
-                <Link href="https://semaphore.pse.dev/discord" isExternal>
+                <Link href="https://discord.gg/VzMMDJmYc5" isExternal>
                     <HStack>
                         <IconDiscord boxSize={{ base: "16px", md: "24px" }} />
                         <Heading fontSize={{ base: "14px", md: "18px" }} fontWeight="normal">
-                            Discord
+                            Discord community
                         </Heading>
                     </HStack>
                 </Link>
 
                 <Link
-                    href="https://github.com/semaphore-protocol/semaphore/discussions/new?category=website"
+                    href="https://github.com/orgs/Unirep/discussions"
                     isExternal
                 >
                     <HStack>
                         <IconThumbsUp boxSize={{ base: "16px", md: "24px" }} />
                         <Heading fontSize={{ base: "14px", md: "18px" }} fontWeight="normal">
-                            Give feedback about the website
+                            Give feedback & discuss ideas
                         </Heading>
                     </HStack>
                 </Link>

@@ -1,14 +1,14 @@
 import { SystemStyleObject } from "@chakra-ui/react"
 import { Styles } from "@chakra-ui/theme-tools"
-import { Outfit } from "next/font/google"
+import { Azeret_Mono } from "next/font/google"
 
-export const font = Outfit({ subsets: ["latin"] })
+export const font = Azeret_Mono({ subsets: ["latin"] })
 
 const styles: Styles = {
     global: (): SystemStyleObject => ({
         body: {
-            bg: "darkBlueBg",
-            color: "white"
+            bg: "darkGrey",
+            color: "lightGrey"
         },
         "body, #__next": {
             minHeight: "100vh"
@@ -18,7 +18,7 @@ const styles: Styles = {
             flexDirection: "column"
         },
         "h1, h2, h3, h4": {
-            fontWeight: "500 !important"
+            fontWeight: "700 !important"
         }
     })
 }

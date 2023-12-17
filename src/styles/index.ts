@@ -6,7 +6,7 @@ import styles, { font } from "./styles"
 const config = {
     fonts: {
         heading: font.style.fontFamily,
-        body: "DM Sans, sans-serif"
+        body: "Azeret+Mono"
     },
     colors,
     styles,

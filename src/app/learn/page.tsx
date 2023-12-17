@@ -348,7 +348,7 @@ const repProof = await userState.genProveReputationProof({
                 >
                     <Image
                         alt="Guy shadow image"
-                        src="https://semaphore.cedoor.dev/guy-shadow-horizontal.jpg"
+                        // src="https://semaphore.cedoor.dev/guy-shadow-horizontal.jpg"
                         quality="100"
                         sizes="100vw"
                         fill
@@ -369,7 +369,7 @@ const repProof = await userState.genProveReputationProof({
                 >
                     <Image
                         alt="Guy shadow image"
-                        src="https://semaphore.cedoor.dev/guy-shadow.png"
+                        // src="https://semaphore.cedoor.dev/guy-shadow.png"
                         quality="100"
                         sizes="100vw"
                         fill

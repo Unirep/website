@@ -18,8 +18,8 @@ export default function Home() {
             <VStack h={{ base: "718", sm: "734", md: "724" }} justify="center" spacing="40" position="relative">
                 <Box zIndex="-1" left="50%" transform="translateX(-50%)" w="100vw" h="100%" pos="absolute">
                     <Image
-                        alt="Midnight whispers image"
-                        src="https://semaphore.cedoor.dev/midnight-whispers.jpg"
+                        alt=""
+                        src="/hero-drop.png"
                         quality="100"
                         sizes="100vw"
                         fill
@@ -30,17 +30,17 @@ export default function Home() {
                 </Box>
 
                 <VStack spacing="4">
-                    <Heading fontSize={{ base: "40px", sm: "46px", md: "72px" }} textAlign="center">
-                        Anonymous user data management
+                    <Heading fontSize={{ base: "40px", sm: "46px", md: "78px" }} textAlign="center" bgGradient="linear(to-l, #8BEBEB, #FCD1AC)" bgClip="text">
+                    A protocol built to handle anonymous user data
                     </Heading>
                     <Text fontSize={{ base: "16px", sm: "18px", md: "20px" }} align="center" maxW="800px">
-                        Using zero knowledge, users can voluntarily prove their group membership and reputation or data in the group without revealing their original identity.
+                    UniRep is a Zero-Knowledge Protocol for user data & reputation management. We use pioneering technology to offer a space for developers and users alike to explore the potential of privacy-centered online interactions.
                     </Text>
                 </VStack>
 
                 <Stack direction={{ base: "column", sm: "row" }} spacing="6" align="center">
                     <Link as={NextLink} href="/build">
-                        <Button size={{ base: "md", md: "lg" }}>Get Started</Button>
+                        <Button size={{ base: "md", md: "lg" }}>Start building</Button>
                     </Link>
                     <Link href="https://demo.unirep.io" isExternal>
                         <Button size={{ base: "md", md: "lg" }} variant="outline">
@@ -186,7 +186,7 @@ export default function Home() {
                 <Box zIndex="-1" left="50%" transform="translateX(-50%)" w="100vw" h="100%" pos="absolute">
                     <Image
                         alt="Fluttering shadow image"
-                        src="https://semaphore.cedoor.dev/shadow-flutter.jpg"
+                        // src="https://semaphore.cedoor.dev/shadow-flutter.jpg"
                         quality="100"
                         sizes="100vw"
                         fill

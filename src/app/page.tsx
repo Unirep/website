@@ -184,16 +184,16 @@ export default function Home() {
 
             <VStack justify="center" spacing="40" py="32" position="relative">
                 <Box zIndex="-1" left="50%" transform="translateX(-50%)" w="100vw" h="100%" pos="absolute">
-                    <Image
+                    {/* <Image
                         alt="Fluttering shadow image"
-                        // src="https://semaphore.cedoor.dev/shadow-flutter.jpg"
+                        src="https://semaphore.cedoor.dev/shadow-flutter.jpg"
                         quality="100"
                         sizes="100vw"
                         fill
                         style={{
                             objectFit: "cover"
                         }}
-                    />
+                    /> */}
                 </Box>
 
                 <Stack direction={{ base: "column", md: "row" }} px={{ base: "0", md: "12" }} spacing="32">

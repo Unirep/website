@@ -140,15 +140,15 @@ export default function Build() {
                 </Flex>
 
                 <Box position="relative" w={{ base: "full", xl: "727px" }} h="630">
-                    <Image
-                        // src="https://semaphore.cedoor.dev/flower-shadow.jpg"
+                    {/* <Image
+                        src="https://semaphore.cedoor.dev/flower-shadow.jpg"
                         alt="Flower Shadow"
                         fill
                         quality="100"
                         style={{
                             objectFit: "cover"
                         }}
-                    />
+                    /> */}
                 </Box>
             </Flex>
             <VStack my="128">

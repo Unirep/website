@@ -60,6 +60,16 @@
         }
     },
     {
+        "name": "Sacred Protocol",
+        "tagline": "Anonymous Protocol for anonymous communication and credentials in Web3",
+        "categories": ["Identity", "Social", "DAO", "Forum"],
+        "pse": false,
+        "icon": "",
+        "links": {
+            "website": "https://www.thatsacred.place/"
+        }
+    },
+    {
         "name": "My-Badge",
         "tagline": "A bridge between web2 reputation (github, twitter) and web3 reputation",
         "categories": ["Identity", "Web2", "Github", "Twitter", "Reputation"],

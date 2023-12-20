@@ -19,7 +19,7 @@ export default function Home() {
                 <Box zIndex="-1" left="50%" transform="translateX(-50%)" w="100vw" h="100%" pos="absolute">
                     <Image
                         alt=""
-                        src="/hero-drop.png"
+                        src="hero-drop.png"
                         quality="100"
                         sizes="100vw"
                         fill
